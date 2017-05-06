@@ -1,25 +1,33 @@
-# Commently
+<p align='center'>
+  <a href="https://mike.works" target='_blank'>
+    <img height=40 src='https://assets.mike.works/img/login_logo-33a9e523d451fb0d902f73d5452d4a0b.png' />
+  </a> 
+</p>
+<p align='center'>
+  <a href="https://mike.works/course/ember-pro-16c648c" target='_blank'>
+    <img src='https://cloud.githubusercontent.com/assets/558005/25771570/e48c9e0c-3255-11e7-97f2-da82911ee1be.png' />
+  </a>
+</p> 
 
-* The `start` branch represents the starting point for the course.
-* The `master` branch represents the state of the project after all exercises are completed.
+* The `master` branch represents the starting point for the course.
+* The `solution` branch represents the state of the project after all exercises are completed.
 * There are several git tags representing the state of the project after exercises are completed.
+* Depending on whether you attended an in-person workshop or watched a video course, you may have a dedicated branch that represents the code I actually wrote during class
 
-## Prerequisites
+## Installing
+You'll need to install several dependencies, including node.js, ember-cli and more. This project includes a command to check whether you're set up with appropriate versions of everything. If you're missing a dependency, please google for instructions regarding installation on your operating system.
 
-You will need the following things properly installed on your computer.
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with NPM)
-* [Bower](https://bower.io/)
-* [Ember CLI](https://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
-
-## Installation
-
+#### Instructions
 * `git clone <repository-url>` this repository
 * `cd commently`
-* `npm install`
+* `./checksetup`
+* Resolve any problems detected by the setup validator
+* `yarn`
 * `bower install`
+* `./checksetup` - one more time, to validate that everything still works with node modules installed
+
+**PLEASE NOTE** We will be using some typescript and a few ruby gems. Even if you're an experienced ember developer, you may not have these on your system.
 
 ## Running / Development
 

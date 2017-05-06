@@ -16,7 +16,6 @@ module.exports = {
   plugins: ['babel', 'promise'],
   rules: {
     "strict": 0,
-    'babel/arrow-parens': 1,
     'no-fallthrough': 0,
     "promise/always-return": "error",
     "promise/no-return-wrap": "error",
