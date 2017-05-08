@@ -1,7 +1,11 @@
 import Ember from 'ember';
 
-const { Controller, inject } = Ember;
+const { Controller, inject,
+  computed, getOwner } = Ember;
 
 export default Controller.extend({
-  currentUser: inject.service()
+  currentUser: inject.service(),
+  loc: computed(function () {
+    return getOwner(this).lookup('data:location');
+  })
 });
