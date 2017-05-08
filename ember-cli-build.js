@@ -21,7 +21,21 @@ CommentFilter.prototype.extensions = ['js', 'ts', 'css'];
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
+    'esw-cache-fallback': {
+      // RegExp patterns specifying which URLs to cache.
+      patterns: [
+        'https://commently-api-stage.herokuapp.com/(.+)'
+      ],
+
+      // changing this version number will bust the cache
+      version: '1'
+    },
+    'esw-index': {
+      // Where the location of your index file is at, defaults to `index.html`
+
+      // changing this version number will bust the cache
+      version: '1'
+    }
   });
 
   app.import('vendor/math-shim.js');

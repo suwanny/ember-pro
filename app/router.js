@@ -3,12 +3,13 @@ import config from './config/environment';
 
 const { Router } = Ember;
 
-const MyRouter = <Ember.Router>Router.extend({
+const MyRouter = Router.extend({
   location: config.locationType,
   rootURL: config.rootURL
 });
 
 MyRouter.map(function() {
+  this.route('shell');
   this.route('posts', function() {
     this.route('show', { path: ':id' });
   });
