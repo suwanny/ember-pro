@@ -1,10 +1,13 @@
 <div class="title-row">
   <img src={{model.authorPhotoUrl}} alt={{authorName}} class="author-portrait">
   <h1 class='post-title'>{{titleize model.title}}</h1>
-  <h1>{{tempState.foo}}</h1>
+  {{!--<h1>{{tempState.foo}}</h1>
   <p>
-    <input value={{tempState.foo}} onInput={{action (mut tempState.foo) value='target.value'}} />
+    <input value={{tempState.foo}}
+          onInput={{action (mut tempState.foo)
+          value='target.value'}} />
   </p>
+  --}}
   <div class="metadata-row">
     <div class="metadata-item author">
       <span class="metadata-item-label">By</span>
@@ -45,14 +48,15 @@
 
 {{#each model.comments as |comment|}}
   {{post-comment
-    model=comment}}
+    model=comment
+    delete-comment=(action 'deleteTheComment' comment)}}
 {{else}}
   <p class="no-comments">
     No comments yet
   </p>
 {{/each}}
-{{x-textarea class='reply-field'}}
-
+{{x-textarea value=commentDraft.body class='reply-field'}}
+<button onclick={{action 'foo'}}>Click Me</button>
 <div class="post-actions">
   <button class='btn'>Reply</button>
 </div>

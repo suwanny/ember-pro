@@ -2,9 +2,11 @@
   {{model.body}}
 </p>
 
+{{#if this.delete-comment}}
 <span class="delete-indicator"
-      onClick={{this.attrs.delete-comment}}>
+      onClick={{this.delete-comment}}>
 </span>
+{{/if}}
 
 {{#if model.updatedAt}}
   <span class="posted-at">
