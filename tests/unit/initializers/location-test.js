@@ -3,10 +3,12 @@ import { initialize } from 'commently/initializers/location';
 import { module, test } from 'qunit';
 import destroyApp from '../../helpers/destroy-app';
 
+const { run, Application } = Ember;
+
 module('Unit | Initializer | location', {
   beforeEach() {
-    Ember.run(() => {
-      this.application = Ember.Application.create();
+    run(() => {
+      this.application = Application.create();
       this.application.deferReadiness();
     });
   },

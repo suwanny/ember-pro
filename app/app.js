@@ -4,7 +4,7 @@ import loadInitializers from 'ember-load-initializers';
 import config from './config/environment';
 import { default as math, PI } from 'math';
 
-const { Application } = Ember;
+const { Application, Logger } = Ember;
 
 let App;
 
@@ -16,8 +16,8 @@ App = Application.extend({
   Resolver
 });
 
-console.log(math.sqrt(4)); // 2
-console.log(PI); // 3.145926...
+Logger.log(math.sqrt(4)); // 2
+Logger.log(PI); // 3.145926...
 
 loadInitializers(App, config.modulePrefix);
 

@@ -1,6 +1,6 @@
 // @ts-check
 
-export function initialize(app) {
+export function initialize(/* app*/) {
   // if (typeof FastBoot === 'undefined') {
   //   let { geolocation } = navigator;
   //   app.deferReadiness();

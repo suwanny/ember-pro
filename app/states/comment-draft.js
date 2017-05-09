@@ -17,14 +17,13 @@ CommentDraft.reopenClass({
 
 export default CommentDraft;
 
-
 // What's passed to the post-comment component
 
 // function deleteThenComment() {}
 
 // typical action
 // let a = function(comment) {
-//   return deleteTheComment(comment); 
+//   return deleteTheComment(comment);
 // };
 
 // let b = function(comment) { // defined in post-full
