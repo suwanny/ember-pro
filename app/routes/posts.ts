@@ -3,7 +3,16 @@ import Ember from 'ember';
 const { Route } = Ember;
 
 export default Route.extend({
-  model() {
-    return this.store.findAll('post');
+  actions: {
+    refreshRoute() {
+      this.refresh();
+    }
+  },
+  model({ search }) {
+    if (!search) {
+      return this.store.findAll('post');
+    } else {
+      return this.store.query('post', { search });
+    }
   }
 });
