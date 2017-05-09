@@ -15,6 +15,12 @@ export default Component.extend({
     },
     deleteTheComment(comment) {
       alert(comment.get('body'));
+    },
+    _saveComment() {
+      debugger;
+      if (this.get('save-comment')) {
+        this.get('save-comment')(this.get('model'), this.get('commentDraft.body'));
+      }
     }
   }
 });
