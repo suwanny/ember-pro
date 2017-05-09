@@ -14,10 +14,9 @@ export default Component.extend({
       console.log('The weakmap is', wm);
     },
     deleteTheComment(comment) {
-      alert(comment.get('body'));
+      comment.destroyRecord();
     },
     _saveComment() {
-      debugger;
       if (this.get('save-comment')) {
         this.get('save-comment')(this.get('model'), this.get('commentDraft.body'));
       }

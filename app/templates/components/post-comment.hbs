@@ -1,10 +1,23 @@
 <p class='comment-body'>
-  {{model.body}}
+  {{#if isEditing}}
+    {{x-input value=model.body disabled=commitChanges.isRunning}}
+    {{#if commitChanges.isIdle}}
+      <button onclick={{perform commitChanges}}>Save</button>
+    {{else}}
+      {{#if isCancellable}}
+        <button onclick={{perform cancelSave}}>Cancel</button>
+      {{else}}
+        TOO LATE!!!!
+      {{/if}}
+    {{/if}}
+  {{else}}
+    {{model.body}}
+  {{/if}}
 </p>
 
 {{#if this.delete-comment}}
 <span class="edit-indicator"
-  onClick={{this.edit-comment}}>
+  onClick={{action (mut isEditing) true}}>
 </span>
 <span class="delete-indicator"
   onClick={{this.delete-comment}}>
