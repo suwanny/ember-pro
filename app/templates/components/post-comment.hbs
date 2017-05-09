@@ -3,8 +3,11 @@
 </p>
 
 {{#if this.delete-comment}}
+<span class="edit-indicator"
+  onClick={{this.edit-comment}}>
+</span>
 <span class="delete-indicator"
-      onClick={{this.delete-comment}}>
+  onClick={{this.delete-comment}}>
 </span>
 {{/if}}
 
