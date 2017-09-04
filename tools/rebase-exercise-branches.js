@@ -23,25 +23,6 @@ const EXERCISE_SETS = {
     'femasters/17-begin', 'femasters/17-complete',
     'femasters/final'
   ],
-  challenge: [
-    'challenge-1',
-    'challenge-2',
-    'challenge-3',
-    'challenge-4',
-    'challenge-5',
-    'challenge-6',
-    'challenge-7',
-    'challenge-8',
-    'challenge-9',
-    'challenge-10',
-    'challenge-11',
-    'challenge-12',
-    'challenge-13',
-    'challenge-14',
-    'challenge-15',
-    'challenge-16',
-    'challenge-17'
-  ],
   // linkedin: [
   //   'linkedin/begin',
   //   'linkedin/1-begin', 'linkedin/1-complete',
