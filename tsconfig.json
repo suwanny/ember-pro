@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "noEmitOnError": false,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "commently/tests/*": ["tests/*"],
+      "commently/*": ["app/*"],
+      "ember-data/*": ["node_modules/ember-data/*"],
+      "ember-resolver/*": ["node_modules/ember-resolver/*"]
+    }
+  },
+  "include": [
+    "app/**/*",
+    "tests/**/*"
+  ]
+}
