@@ -2,19 +2,19 @@ module.exports = {
   root: true,
   parser: "babel-eslint",
   parserOptions: {
-    ecmaVersion: 6,
+    ecmaVersion: 2017,
     sourceType: 'module'
   },
-  indent: ['error', 2],
   extends: [
     'eslint:recommended',
     'plugin:ember-suave/recommended'
   ],
   env: {
-    'browser': true
+    browser: true
   },
   plugins: ['babel', 'promise'],
   rules: {
+    "indent": ['warn', 2],
     "strict": 0,
     'no-fallthrough': 0,
     "promise/always-return": "error",
