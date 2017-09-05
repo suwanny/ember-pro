@@ -26,7 +26,7 @@ function checkVersion(name, target, cmd) {
     child.stdout.on('data', function(data) {
       str += data.toString();
     });
-    child.stdout.on('close', function() {
+    child.on('close', function() {
       if (didError) {
         process.stdout.write('│ 🚫  ERROR trying to check version of ' + name + '.\n│    Perhaps you need to install it? (needs version: ' + target + ')\n');
         reject('not-installed');
@@ -63,7 +63,7 @@ function line(name) {
 }
 
 function stripVersion(x) {
-  var parts = /[0-9]\.[0-9\.]+/.exec(x);
+  var parts = /[0-9](?:\.[0-9]+){0,2}/.exec(x);
   return parts && parts.length ? parts[0] : 'NONE';
 }
 
@@ -79,16 +79,6 @@ Promise.all([
     command: 'watchman',
     args: ['-v']
   }),
-  checkVersion('Sassc', '>= 3', {
-    command: 'sassc',
-    args: ['-version', '|', 'grep', '"sassc:"'],
-    filter: stripVersion
-  }),
-  checkVersion('LibSass', '>= 3', {
-    command: 'sassc',
-    args: ['-version', '|', 'grep', '"libsass:"'],
-    filter: stripVersion
-  })
 ]).catch(function() { }).then(function () {
   line('JavaScript Tools')();
 }).then(function () {
@@ -99,15 +89,6 @@ Promise.all([
     }),
     checkVersion('Yarn', '>= 0.20', {
       command: 'yarn',
-      args: ['--version']
-    }),
-    checkVersion('Typescript', '>= 2', {
-      command: 'tsc',
-      args: ['-v'],
-      filter: stripVersion
-    }),
-    checkVersion('Babel', '>= 6', {
-      command: 'babel-node',
       args: ['--version']
     }),
     checkVersion('ESLint', '>= 3', {
@@ -123,15 +104,14 @@ Promise.all([
   line('Ruby Tools')();
 }).then(function () {
   return Promise.all([
-    checkVersion('Ruby', '>= 2.2', {
+    checkVersion('Ruby', '>= 2.0', {
       command: 'ruby',
-      args: ['-v'],
+      args: ['--version'],
       filter: stripVersion
     }),
-
     checkVersion('Gem', '>= 2', {
       command: 'gem',
-      args: ['-v'],
+      args: ['--version'],
       filter: stripVersion
     })
   ]);
@@ -166,8 +146,3 @@ Promise.all([
     })
   ]);
 }).catch(function() { });
-
-
-
-
-
