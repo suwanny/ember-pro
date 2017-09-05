@@ -19,8 +19,8 @@ You'll need to install several dependencies, including node.js, ember-cli and mo
 
 
 #### Instructions
-* `git clone <repository-url>` this repository
-* `cd commently`
+* `git clone https://github.com/mike-north/ember-pro` this repository
+* `cd ember-pro`
 * `./checksetup`
 * Resolve any problems detected by the setup validator
 * `yarn`
