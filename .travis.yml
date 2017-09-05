@@ -1,24 +1,27 @@
----
 language: node_js
 node_js:
-  - "6"
-
+- '6'
 sudo: false
-
 cache:
   directories:
-    - $HOME/.npm
-    - $HOME/.cache # includes bowers cache
-
+  - "$HOME/.npm"
+  - "$HOME/.cache"
 before_install:
-  - npm config set spin false
-  - npm install -g bower phantomjs-prebuilt
-  - bower --version
-  - phantomjs --version
-
+- npm config set spin false
+- npm install -g bower phantomjs-prebuilt
+- bower --version
+- phantomjs --version
 install:
-  - npm install
-  - bower install
-
+- npm install
+- bower install
 script:
-  - npm test
+- npm test
+deploy:
+  provider: heroku
+  api_key:
+    secure: m9RUDroc1KDseBvOEK7PiblQIGc7pxn0wc+nzNTbzb9prQmzpkmkL9d4Na7hL4QLGxkzoDDPM6sxBbNTU6rfC2lT5864dfsTh00uzjDlnhuL2Efcuk/iWWj1ffyon6WbtmXVH5D2mPKLDjrY3uLgqroVZEyQTRVVzq3a7oLeXiJ42Xwx1RMDk3eiPy/O6EmJQpBdqg9kfFjl5/rrcCm+Pqkznulf8hn28b8jzF8mDypBfnCxKsyXEiuu8wScwi2P+8NAafTcnl39FHN2hPJooatkTk2Jn92IPWP/KlEZffpLUvgcVNP1rv2B82VOLPZqZSiNp8F9HPtUpkbKTc64qqrEpeABUamWhNLCx6zSUU//uH/FrCzWx2gfg4MHbQr6MoSxjMBqxMMoUB/amCRMU+eOggjbfNn4VR47HL85p+2ii606gzEj0hyo1LWSfSFiwR2Kd6UkR1Q4bmaXDzLZjyPGOH4tKgMqCl88UCyrA/1P9mRSDF5CEv53ejQOiB4W5iOWi8YeCvE1h8/mH2ai5oWldCzIqANgZ1VIvSC6maHovNYXEeN3Qp/tDE1TUAGip5TwwuDzoe/v9q+M8UQesPtMUoDGqRLxx5fp+0OWfKb7rTkszPJb7KV40LFP9X9pXcqwdWZ12mI7JmIuUU6Q4bMiLdYMZ6WLkqmSG7jV6No=
+  app: enigmatic-sea-52342
+  on:
+    repo: mike-north/ember-pro
+    branch: linkedin/4-complete
+    
