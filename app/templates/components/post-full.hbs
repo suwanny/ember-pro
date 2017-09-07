@@ -2,7 +2,8 @@
   <img src={{model.authorPhotoUrl}} alt={{authorName}} class="author-portrait">
   <h1 class='post-title'>{{titleize model.title}}</h1>
   
-  <div class="metadata-row">
+  {{#if postInfo.isMetaOpen}}
+  <div class="metadata-row"  onClick={{action (mut postInfo.isMetaOpen) false}}>
     <div class="metadata-item author">
       <span class="metadata-item-label">By</span>
       <span class="metadata-item-value">{{model.authorName}}</span>
@@ -24,7 +25,9 @@
     </div>  
     {{/if}}
   </div>
-
+  {{else}}
+    <span onClick={{action (mut postInfo.isMetaOpen) true}}>...details</span>
+  {{/if}}
 </div>
 
 
@@ -42,6 +45,7 @@
 
 {{#each model.comments as |comment|}}
   {{post-comment
+    delete-comment=(action 'deleteComment' comment)
     model=comment}}
 {{else}}
   <p class="no-comments">
@@ -53,5 +57,6 @@
   class='reply-field'}}
   {{postInfo.draftComment}}
 <div class="post-actions">
-  <button class='btn'>Reply</button>
+  <button class='btn'
+    onClick={{action this.save-comment model postInfo}}>Reply</button>
 </div>
