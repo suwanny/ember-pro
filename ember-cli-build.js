@@ -27,6 +27,15 @@ ${existingString}
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
+    'esw-cache-fallback': {
+      // RegExp patterns specifying which URLs to cache.
+      patterns: [
+        'https://commently-api-stage.herokuapp.com/api/(.+)'
+      ],
+
+      // changing this version number will bust the cache
+      version: '1'
+    }
     // Add options here
   });
 

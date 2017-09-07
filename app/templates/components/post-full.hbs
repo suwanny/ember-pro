@@ -48,8 +48,10 @@
     No comments yet
   </p>
 {{/each}}
-{{x-textarea class='reply-field'}}
-
+{{x-textarea
+  value=postInfo.draftComment
+  class='reply-field'}}
+  {{postInfo.draftComment}}
 <div class="post-actions">
   <button class='btn'>Reply</button>
 </div>
