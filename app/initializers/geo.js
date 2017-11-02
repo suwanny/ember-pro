@@ -13,6 +13,7 @@ function attemptLocationRetrieval(app) {
 }
 
 export function initialize(app) {
+  console.log('running geo initializer');
   attemptLocationRetrieval(app);
 }
 

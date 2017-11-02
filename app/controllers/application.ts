@@ -2,6 +2,7 @@ import Ember from 'ember';
 import { default as math, PI } from 'math';
 
 const { Controller, inject } = Ember;
+function foo() { }
 
 export default Controller.extend({
   currentUser: inject.service(),
@@ -11,7 +12,12 @@ export default Controller.extend({
   },
   init() {
     this._super(...arguments);
-    let geo = Ember.getOwner(this).lookup('data:location');
+    let owner = Ember.getOwner(this);
+    let geo = owner.lookup('data:location');
+    let req = owner.lookup('data:request');
     this.set('geo', geo);
+    this.set('req', req);
+
+
   }
 });
