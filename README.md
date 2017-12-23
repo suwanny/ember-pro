@@ -5,9 +5,27 @@
 </p>
 <p align='center'>
   <a href="https://mike.works/course/ember-pro-16c648c" target='_blank'>
-    <img src='https://cloud.githubusercontent.com/assets/558005/25771570/e48c9e0c-3255-11e7-97f2-da82911ee1be.png' />
+    <img height=150 src='https://cloud.githubusercontent.com/assets/558005/25771570/e48c9e0c-3255-11e7-97f2-da82911ee1be.png' />
   </a>
 </p> 
+
+<p align='center'>
+  <a href="https://travis-ci.org/mike-north/ember-pro" title="Build Status">
+    <img title="Build Status" src="https://travis-ci.org/mike-north/ember-pro.svg?branch=master"/>
+  </a>
+  <a href="https://mike.works/course/ember-pro-16c648c" title="Ember Pro">
+    <img title="Course Outline" src="https://img.shields.io/badge/mike.works-course%20outline-blue.svg"/>
+  </a>
+  <a href="https://docs.mike.works/ember-pro" title="Slides">
+    <img title="Slides" src="https://img.shields.io/badge/mike.works-slides-blue.svg"/>
+  </a>
+  <a title="Greenkeeper badge" href="https://greenkeeper.io/">
+    <img src="https://badges.greenkeeper.io/mike-north/ember-pro.svg"/>
+  </a>
+</p>
+<p align='center'>
+This is the  project used for the <a title="Mike.Works" href="https://mike.works">Mike.Works</a> <a title="Ember Pro" href="https://mike.works/course/ember-pro-16c648c">Ember Pro</a> course.
+</p>
 
 * The `master` branch represents the starting point for the course.
 * The `solution` branch represents the state of the project after all exercises are completed.
