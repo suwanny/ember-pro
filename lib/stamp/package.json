@@ -1,0 +1,9 @@
+{
+  "name": "stamp",
+  "dependencies": {
+    "broccoli-filter": "*"
+  },
+  "keywords": [
+    "ember-addon"
+  ]
+}

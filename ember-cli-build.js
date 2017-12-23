@@ -1,27 +1,6 @@
 /* eslint-env node */
 'use strict';
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
-const Filter = require('broccoli-filter');
-
-function CommentAppender(inputNode) {
-  Filter.call(this, inputNode);
-}
-
-CommentAppender.prototype = Object.create(Filter.prototype);
-
-CommentAppender.prototype.processString = function (existingString, name) {
-  let d = new Date();
-  return `/**
- * ${name}
- *
- * (c) ${d.getFullYear()} 🦄🦄🦄🔫🌈🍺🍺 All Rights Reserved
- * generated at: ${d.toISOString()}
- */
-${existingString}
-`;
-};
-
-CommentAppender.prototype.extensions = ['css', 'js'];
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
@@ -41,5 +20,5 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  return new CommentAppender(app.toTree());
+  return app.toTree();
 };
