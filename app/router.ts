@@ -1,12 +1,12 @@
 import EmberRouter from '@ember/routing/router';
 import config from './config/environment';
 
-const Router = EmberRouter.extend({
+const MyRouter = EmberRouter.extend({
   location: config.locationType,
   rootURL: config.rootURL
 });
 
-Router.map(function() {
+MyRouter.map(function() {
   this.route('posts', function() {
     this.route('show', { path: ':id' });
   });
@@ -17,4 +17,4 @@ Router.map(function() {
   });
 });
 
-export default Router;
+export default MyRouter;
