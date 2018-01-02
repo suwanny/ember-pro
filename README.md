@@ -10,8 +10,8 @@
 </p> 
 
 <p align='center'>
-  <a href="https://travis-ci.org/mike-north/ember-pro" title="Build Status">
-    <img title="Build Status" src="https://travis-ci.org/mike-north/ember-pro.svg?branch=master"/>
+  <a href="https://travis-ci.org/mike-works/ember-pro" title="Build Status">
+    <img title="Build Status" src="https://travis-ci.org/mike-works/ember-pro.svg?branch=master"/>
   </a>
   <a href="https://mike.works/course/ember-pro-16c648c" title="Ember Pro">
     <img title="Course Outline" src="https://img.shields.io/badge/mike.works-course%20outline-blue.svg"/>
@@ -20,7 +20,7 @@
     <img title="Slides" src="https://img.shields.io/badge/mike.works-slides-blue.svg"/>
   </a>
   <a title="Greenkeeper badge" href="https://greenkeeper.io/">
-    <img src="https://badges.greenkeeper.io/mike-north/ember-pro.svg"/>
+    <img src="https://badges.greenkeeper.io/mike-works/ember-pro.svg"/>
   </a>
 </p>
 <p align='center'>
@@ -37,7 +37,7 @@ You'll need to install several dependencies, including node.js, ember-cli and mo
 
 
 #### Instructions
-* `git clone https://github.com/mike-north/ember-pro` this repository
+* `git clone https://github.com/mike-works/ember-pro` this repository
 * `cd ember-pro`
 * `./checksetup`
 * Resolve any problems detected by the setup validator
@@ -77,3 +77,7 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
+
+---
+&copy; 2018 Mike Works Inc., All Rights Reserved
