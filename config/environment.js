@@ -1,4 +1,5 @@
-/* jshint node: true */
+/* eslint-env node */
+'use strict';
 
 module.exports = function(environment) {
   let ENV = {
@@ -23,6 +24,7 @@ module.exports = function(environment) {
       namespace: 'api',
       host: 'https://commently-api-stage.herokuapp.com'
     },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
