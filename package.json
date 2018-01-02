@@ -2,13 +2,13 @@
   "name": "commently",
   "version": "0.0.0",
   "description": "Small description for commently goes here",
-  "license": "MIT",
-  "author": "",
+  "license": "BSD-3-Clause",
+  "author": "Mike North <michael.l.north@gmail.com> (https://mike.works)",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/mike-works/ember-pro",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
