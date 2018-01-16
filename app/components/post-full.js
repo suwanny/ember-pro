@@ -1,9 +1,15 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 import stateFor from 'ember-state-services/state-for';
-
-const { Component } = Ember;
 
 export default Component.extend({
   info: stateFor('post-info', 'model'),
-  classNames: ['post-full']
+  classNames: ['post-full'],
+
+  actions: {
+    deleteComment(comment) {
+      comment.destroyRecord();
+    }
+  }
 });
+
+

@@ -1,6 +1,6 @@
-import Ember from 'ember';
-
-const { Controller, inject, getOwner } = Ember;
+import { inject as service } from '@ember/service';
+import Controller from '@ember/controller';
+import { getOwner } from '@ember/application';
 
 export default Controller.extend({
   init() {
@@ -12,5 +12,5 @@ export default Controller.extend({
       this.set('loc', v);
     })
   },
-  currentUser: inject.service()
+  currentUser: service()
 });

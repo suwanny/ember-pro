@@ -4,10 +4,11 @@ module.exports = {
     ecmaVersion: 2017,
     sourceType: 'module'
   },
-  extends: 'eslint:recommended',
+  extends: ['eslint:recommended', 'plugin:ember-best-practices/recommended'],
   env: {
     browser: true
   },
   rules: {
+    "no-case-declarations": 0
   }
 };

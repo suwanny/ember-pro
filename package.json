@@ -54,6 +54,7 @@
     "ember-state-services": "4.0.0",
     "ember-truth-helpers": "2.0.0",
     "eslint-plugin-babel": "^4.1.0",
+    "eslint-plugin-ember-best-practices": "^1.1.1",
     "eslint-plugin-ember-suave": "^1.0.0",
     "eslint-plugin-promise": "^3.4.0",
     "greenkeeper-lockfile": "^1.12.0",

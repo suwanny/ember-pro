@@ -4,7 +4,7 @@ export function initialize(app) {
   const { geolocation } = navigator;
   // app.deferReadiness(); // PAUSE
   
-  let locPromise = new Promise((res, rej) => {
+  let locPromise = new Promise((res) => {
     // let timeout = setTimeout(rej, 5000);
     geolocation.getCurrentPosition((pos) => {
         let {
