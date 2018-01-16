@@ -58,7 +58,8 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Running Tests
 
-* `ember test`
+
+* 'ember test'
 * `ember test --server`
 
 ### Building

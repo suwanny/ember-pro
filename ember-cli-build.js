@@ -28,6 +28,12 @@ MyPlugin.prototype.extensions = ['js', 'css'];
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     // Add options here
+    'esw-cache-fallback': {
+      // RegExp patterns specifying which URLs to cache.
+      patterns: [
+        'https://commently-api-stage.herokuapp.com/api/(.+)',
+      ]
+    }
   });
   app.import('vendor/math.js');
  

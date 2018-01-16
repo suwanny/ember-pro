@@ -1,10 +1,17 @@
 <div class="posts-index">
   <div class="posts-left">
     <div class="posts-left-search">
+
+
       <input
+        style="color:black"
         class='posts-search-field'
+        value={{filter}}
+        onKeyUp={{action 'searchChanged'}}
         type='search'
         placeholder='🔎 Search'/>
+
+
     </div>
     <div class="posts-left-content">
       <div class="posts-left-content-pane">

@@ -14,7 +14,7 @@ export function initialize(app) {
         // do something with the container
         // clearTimeout(timeout);
         // debugger;
-        console.log('promise resolved');
+        // console.log('promise resolved');
         res({lat, lng});
         // app.advanceReadiness(); // UN-PAUSE
       });
