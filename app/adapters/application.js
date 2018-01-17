@@ -24,6 +24,19 @@ export default JSONAPIAdapter.extend(DataAdapterMixin, {
       default: return this._super(...arguments);
     }
   },
+  urlForUpdateRecord(id, modelName, snapshot){
+    switch(modelName){ 
+      case 'comment':
+        let post = snapshot.belongsTo('post');
+        let postUrl = this.urlForFindRecord(
+            post.id,
+            'post',
+            post
+          );
+        return `${postUrl}/comments/${id}`;
+      default: return this._super(...arguments);
+    }
+  },
 
   urlForDeleteRecord(id, modelName, snapshot){
     switch(modelName){ 

@@ -6,7 +6,9 @@ export default Controller.extend({
   init() {
     this._super(...arguments);
     // debugger;
-    getOwner(this).lookup('data:location').then((v) => {
+    let dataPromise = getOwner(this).lookup('data:location');
+    if (!dataPromise) return;
+    dataPromise.then((v) => {
       // debugger;
       // console.log('property set');
       this.set('loc', v);

@@ -4,7 +4,7 @@ import { debounce } from '@ember/runloop'
 export default Controller.extend({
   filter: '',
   fireSearchUpdate() {
-    console.log('change!', this.get('filter'));
+    // console.log('change!', this.get('filter'));
     this.send('reloadRoute');
   },
   actions: {

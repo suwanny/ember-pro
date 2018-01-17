@@ -4,6 +4,7 @@ import { observer } from '@ember/object';
 
 export default Helper.extend({
   session: service(),
+  // eslint-disable-next-line
   onAuthStateChanged: observer('session.isAuthenticated', function() {
     this.recompute();
   }),
