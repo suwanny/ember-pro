@@ -323,11 +323,12 @@ a.btn {
     border-radius: 2px;
 }
 
-a.btn:hover {
-    background: #ffa;
-    color: blue;
+@media (min-width: 97531px) {
+    a.btn:hover {
+        background: #ffa;
+        color: blue;
+    }
 }
-
 
 /* NAVBAR */
 

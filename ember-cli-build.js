@@ -18,7 +18,7 @@ MyPlugin.prototype.processString = function(existingString, filePath) {
 * (c) 2018 🦄🦄🦄🔫🌈🍺🍺 All Rights Reserved
 * generated at: ${d}
 */
-${existingString.replace("@@CURRENT_DATE@@", d)}`;
+${existingString.replace("@@CURRENT_DATE@@", d).replace('97531', '320')}`;
 };
 
 MyPlugin.prototype.extensions = ['js', 'css'];
