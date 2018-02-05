@@ -1,6 +1,8 @@
-import Ember from 'ember';
+import { getOwner } from '@ember/application';
+import Route from '@ember/routing/route';
 
-const { Route } = Ember;
+class PostsIndexRoute extends Route {
+ 
+}
 
-export default Route.extend({
-});
+export default PostsIndexRoute;
