@@ -4,7 +4,11 @@
       <input
         class='posts-search-field'
         type='search'
-        placeholder='🔎 Search'/>
+        placeholder='🔎 Search'
+        value={{search}}
+        onInput={{action 'searchChanged'}}
+        {{!-- onInput={{action (mut search) value="target.value"}} --}}
+        />
     </div>
     <div class="posts-left-content">
       <div class="posts-left-content-pane">

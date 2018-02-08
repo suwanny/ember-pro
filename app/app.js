@@ -7,6 +7,7 @@ import { default as math, PI } from 'math';
 console.log(math.sqrt(4)); // 2
 console.log(PI) // 3.145926...
 
+
 const App = Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
