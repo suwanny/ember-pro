@@ -11,7 +11,19 @@ console.log(PI) // 3.145926...
 const App = Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
-  Resolver
+  Resolver,
+  engines: {
+    blog: {
+      dependencies: {
+        services: [
+          {'user': 'current-user'}
+        ],
+        externalRoutes: {
+          home: 'posts.index'
+        }
+      }
+    }
+  }
 });
 
 loadInitializers(App, config.modulePrefix);

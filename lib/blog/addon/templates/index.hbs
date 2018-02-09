@@ -1,0 +1,7 @@
+<h4>index.hbs (blog)</h4>
+<h6>User is: {{user.current.email}}</h6>
+<ul>
+  {{#each articles as |a|}}
+  <li>{{link-to a.title 'article' a.title}}</li>
+  {{/each}}
+</ul>
