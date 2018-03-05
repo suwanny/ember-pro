@@ -2,6 +2,24 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const Filter = require('broccoli-filter');
+
+/// BROCCOLI PLUGIN ///
+function CommentPlugin(inputNode) {
+  Filter.call(this, inputNode);
+}
+CommentPlugin.prototype = Object.create(Filter.prototype);
+CommentPlugin.prototype.processString = function(existingString, filePath) {
+  return `/**
+ * ${filePath}
+ *
+ * (c) 2018 🦄🦄🦄🔫🌈🍺🍺 All Rights Reserved
+ * generated at: ${new Date()}
+ */
+${existingString}`;
+};
+
+CommentPlugin.prototype.extensions = ["css", "js"];
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
@@ -23,5 +41,5 @@ module.exports = function(defaults) {
 
   app.import('vendor/math-shim.js');
 
-  return app.toTree();
+  return new CommentPlugin(app.toTree());
 };
