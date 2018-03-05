@@ -9,12 +9,10 @@ const App = Application.extend({
   Resolver
 });
 
-define("math", function() {
-  return {
-    default: Math,
-    PI: Math.PI
-  };
-});
+import { default as math, PI } from "math";
+
+console.log("math", math);
+console.log("PI", PI);
 
 loadInitializers(App, config.modulePrefix);
 
