@@ -8,7 +8,7 @@ export default Controller.extend({
     const container = getOwner(this);
     const loc = container.lookup("data:location");
 
-    console.log('loc from posts controller .. ', loc);
+    // console.log('loc from posts controller .. ', loc);
     this.set('loc', loc);
   }
 });

@@ -3,29 +3,19 @@
     // Use hover for the description of the existing attributes
     // For further information visit https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": [{
-        "name": "Launch (Regular)",
-        "type": "node2",
-        "request": "launch",
-        "program": "${workspaceRoot}/node_modules/.bin/ember",
-        "args": [
-            "serve"
-        ],
-        "cwd": "${workspaceRoot}"
-    }, {
-        "name": "Launch (Fastboot)",
-        "type": "node2",
-        "request": "launch",
-        "program": "${workspaceRoot}/node_modules/.bin/ember",
-        "args": [
-            "fastboot",
-            "--serve-assets"
-        ],
-        "cwd": "${workspaceRoot}"
-    }, {
-        "name": "Attach to Process",
-        "type": "node2",
+    "configurations": [
+      {
+        "type": "node",
         "request": "attach",
-        "port": 5858
-    }]
+        "name": "Attach",
+        "port": 9229
+      },
+      {
+        "type": "chrome",
+        "request": "launch",
+        "name": "Launch Chrome",
+        "url": "http://localhost:4200",
+        "webRoot": "${workspaceFolder}"
+      }
+    ]
 }
