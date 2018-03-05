@@ -2471,7 +2471,7 @@ ember-cli-valid-component-name@^1.0.0:
   dependencies:
     silent-error "^1.0.0"
 
-ember-cli-version-checker@^1.0.2, ember-cli-version-checker@^1.1.4, ember-cli-version-checker@^1.1.6, ember-cli-version-checker@^1.1.7, ember-cli-version-checker@^1.2.0:
+ember-cli-version-checker@^1.0.2, ember-cli-version-checker@^1.1.6, ember-cli-version-checker@^1.1.7, ember-cli-version-checker@^1.2.0:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/ember-cli-version-checker/-/ember-cli-version-checker-1.3.1.tgz#0bc2d134c830142da64bf9627a0eded10b61ae72"
   dependencies:
@@ -2603,9 +2603,9 @@ ember-cookies@^0.1.0:
     ember-cli-babel "^6.8.2"
     ember-getowner-polyfill "^1.1.0 || ^2.0.0"
 
-ember-data@~2.17.0:
-  version "2.17.0"
-  resolved "https://registry.yarnpkg.com/ember-data/-/ember-data-2.17.0.tgz#d952cf98d7461abf41ed6d248cf2a5836c623276"
+ember-data@~2.18.0:
+  version "2.18.2"
+  resolved "https://registry.yarnpkg.com/ember-data/-/ember-data-2.18.2.tgz#3c6e99c9aed77ef8945451c39f39865f370f3db4"
   dependencies:
     amd-name-resolver "0.0.7"
     babel-plugin-ember-modules-api-polyfill "^1.4.2"
@@ -2626,7 +2626,7 @@ ember-data@~2.17.0:
     ember-cli-path-utils "^1.0.0"
     ember-cli-string-utils "^1.0.0"
     ember-cli-test-info "^1.0.0"
-    ember-cli-version-checker "^1.1.4"
+    ember-cli-version-checker "^2.1.0"
     ember-inflector "^2.0.0"
     ember-runtime-enumerable-includes-polyfill "^2.0.0"
     exists-sync "0.0.3"
@@ -2791,9 +2791,9 @@ ember-runtime-enumerable-includes-polyfill@^2.0.0:
     ember-cli-babel "^6.0.0"
     ember-cli-version-checker "^1.1.6"
 
-ember-simple-auth@1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/ember-simple-auth/-/ember-simple-auth-1.4.1.tgz#2e32298b582fc0f029f70933cb162f69861cd60c"
+ember-simple-auth@1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/ember-simple-auth/-/ember-simple-auth-1.4.2.tgz#d8de79f4bcfb5830f43e61e43464885801544e94"
   dependencies:
     base-64 "^0.1.0"
     broccoli-file-creator "^1.1.1"
