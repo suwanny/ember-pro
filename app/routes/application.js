@@ -16,15 +16,5 @@ export default Route.extend(ApplicationRouteMixin, {
     if (this.get('session.isAuthenticated')) {
       return this.get('currentUser').loadUserInfo();
     }
-  },
-  setupController(controller) {
-    this._super(...arguments);
-
-    // lookup from the container.
-    const container = getOwner(this);
-    const loc = container.lookup("data:location");
-
-    // set the value in the controller
-    controller.set('loc', loc);
-  },
+  }
 });

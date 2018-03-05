@@ -6,9 +6,12 @@ export default Controller.extend({
     this._super(...arguments);
 
     const container = getOwner(this);
-    const loc = container.lookup("data:location");
 
-    // console.log('loc from posts controller .. ', loc);
+    let loc = {};
+    if (typeof FastBoot === 'undefined') {
+      loc = container.lookup("data:location");
+    }
+
     this.set('loc', loc);
   }
 });
