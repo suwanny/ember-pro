@@ -25,20 +25,6 @@ export default Route.extend(ApplicationRouteMixin, {
     controller.set("req", reqObj);
 
 
-    // let headers = this.get("fastboot.request.headers");
-    // let shoebox = this.get("fastboot.shoebox");
-    // let shoeboxStore = shoebox.retrieve("my-store");
 
-    // if (this.get('fastboot.isFastBoot')) {
-    //   if (!shoeboxStore) {
-    //     // Lazily create the store
-    //     shoeboxStore = {};
-    //     shoebox.put('my-store', shoeboxStore);
-    //   }
-
-    //   //  Put the data in the store
-    //   let xRequestHeader = headers.get("X-Request");
-    //   shoeboxStore['data:request'] = xRequestHeader;
-    // }
   },
 });
