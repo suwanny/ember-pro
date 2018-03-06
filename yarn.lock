@@ -2628,6 +2628,13 @@ ember-cookies@^0.1.0:
     ember-cli-babel "^6.8.2"
     ember-getowner-polyfill "^1.1.0 || ^2.0.0"
 
+ember-data-fastboot@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/ember-data-fastboot/-/ember-data-fastboot-0.1.1.tgz#0ac4d5b74620cbf5308c5cd395fb9ce798483521"
+  dependencies:
+    ember-cli-babel "^5.1.6"
+    ember-cli-version-checker "^2.0.0"
+
 ember-data@~2.18.0:
   version "2.18.2"
   resolved "https://registry.yarnpkg.com/ember-data/-/ember-data-2.18.2.tgz#3c6e99c9aed77ef8945451c39f39865f370f3db4"
