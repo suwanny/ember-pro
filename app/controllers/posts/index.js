@@ -14,8 +14,6 @@ export default Controller.extend({
       request = container.lookup("data:request");
     }
 
-    console.log('request', request);
-
     this.set('loc', loc);
     this.set("req", request);
   }

@@ -24,6 +24,17 @@ CommentPlugin.prototype.extensions = ["css", "js"];
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     // Add options here
+    'esw-cache-fallback': {
+      // RegExp patterns specifying which URLs to cache.
+      patterns: [
+        '/assets/(.+)',
+        '/posts/(.+)',
+        'http://images.contentful.com/(.+)',
+        'https://commently-api-stage.herokuapp.com/api/(.+)'
+      ],
+      // changing this version number will bust the cache
+      version: '1'
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated
